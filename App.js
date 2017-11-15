@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
     paddingTop: 42,
     flex: 1,
     backgroundColor: '#e0e0e0',
-    justifyContent: 'center',
     alignItems: 'center',
   },
   listContainer: {
@@ -39,11 +38,9 @@ const styles = StyleSheet.create({
     paddingLeft: 8,
     paddingRight: 8,
     marginTop: 8,
-    justifyContent: 'center',
     backgroundColor: '#fff',
   },
   item: {
-    alignSelf: 'stretch',
     backgroundColor: '#f0f0f0',
     padding: 8,
     marginTop: 8,
