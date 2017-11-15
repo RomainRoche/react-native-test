@@ -38,7 +38,6 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingLeft: 8,
     paddingRight: 8,
-    paddingBottom: 8,
     marginTop: 8,
     justifyContent: 'center',
     backgroundColor: '#fff',
