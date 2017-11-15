@@ -5,12 +5,14 @@ export default class Wine {
     name;
     year;
     appelation;
+    imageUrl;
 
-    constructor(id, name, year, appelation) {
+    constructor(id, name, year, appelation, imageUrl) {
         this.id = id;
         this.name = name;
         this.year = year;
         this.appelation = appelation;
+        this.imageUrl = imageUrl;
     }
 
 }

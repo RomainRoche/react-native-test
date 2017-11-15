@@ -1,5 +1,6 @@
 import React from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
+import WineCard from './WineCard.js'
 
 export default class WinesList extends React.Component {
     render() {
@@ -7,13 +8,12 @@ export default class WinesList extends React.Component {
             <FlatList style={styles.listContainer}
                 data={this.props.data}
                 renderItem={({item}) =>
-                    <View style={styles.item}>
-                        <Text style={styles.name}>
-                            {item.name}
-                            <Text style={styles.year}>, {item.year}</Text>
-                        </Text>
-                        <Text style={styles.appelation}>{item.appelation}</Text>
-                    </View>
+                    <WineCard 
+                        imageUrl={item.imageUrl}
+                        name={item.name}
+                        year={item.year}
+                        appelation={item.appelation}
+                    />
                 }
                 keyExtractor={(item, index) => item.id}
             />
