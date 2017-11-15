@@ -1,22 +1,21 @@
 import React from 'react';
-import { FlatList, StyleSheet, Text } from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 
 export default class WinesList extends React.Component {
-
     render() {
         return(
             <FlatList style={styles.listContainer}
-                data={[
-                    {key: 0, name: 'La Louvière'},
-                    {key: 1, name: 'La Louvière'},
-                    {key: 2, name: 'La Louvière'},
-                    {key: 3, name: 'La Louvière'},
-                    {key: 4, name: 'La Louvière'},
-                    {key: 5, name: 'La Louvière'},
-                ]}
+                data={this.props.data}
                 renderItem={({item}) =>
-                    <Text style={styles.item}>{item.name}</Text>
+                    <View style={styles.item}>
+                        <Text style={styles.name}>
+                            {item.name}
+                            <Text style={styles.year}>, {item.year}</Text>
+                        </Text>
+                        <Text style={styles.appelation}>{item.appelation}</Text>
+                    </View>
                 }
+                keyExtractor={(item, index) => item.id}
             />
         );
     }
@@ -30,13 +29,20 @@ const styles = StyleSheet.create({
         paddingLeft: 8,
         paddingRight: 8,
         marginTop: 8,
-        backgroundColor: '#fff',
       },
       item: {
-        backgroundColor: '#f0f0f0',
+        backgroundColor: '#fff',
         padding: 8,
-        marginTop: 8,
+        marginTop: 8,        
+      },
+      name: {
         fontSize: 18,
-        height: 44
+      },
+      year: {
+        fontSize: 14
+      },
+      appelation: {
+          fontSize: 16,
+          fontWeight: 'bold',
       }
 });
