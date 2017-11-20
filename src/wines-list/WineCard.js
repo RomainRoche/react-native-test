@@ -51,5 +51,5 @@ const styles = StyleSheet.create({
     appelation: {
         fontSize: 16,
         fontWeight: 'bold',
-      }
+    }
 });
