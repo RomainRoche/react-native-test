@@ -3,16 +3,15 @@ import { FlatList, StyleSheet, Text, View } from 'react-native';
 import WineCard from './WineCard.js'
 
 export default class WinesList extends React.Component {
+
     render() {
         return(
             <FlatList style={styles.listContainer}
                 data={this.props.data}
                 renderItem={({item}) =>
                     <WineCard 
-                        imageUrl={item.imageUrl}
-                        name={item.name}
-                        year={item.year}
-                        appelation={item.appelation}
+                        wine={item} 
+                        onCardClicked={this.props.onCardClicked}
                     />
                 }
                 keyExtractor={(item, index) => item.id}

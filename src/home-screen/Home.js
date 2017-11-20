@@ -14,11 +14,16 @@ export default class HomeScreen extends React.Component {
         new Wine(4, 'Château Citran', 2009, 'Haut Médoc', 'http://www.mondovino.com/8182-16044-thickbox/ch%C3%A2teau-citran-2010-magnum.jpg'),
     ];
 
+    handleCardClicked(wine) {
+        console.log('tapped ' + wine.name);
+    }
+
     render() {
         return (
             <View style={styles.container}>
                 <WinesList 
                     data={HomeScreen.Wines}
+                    onCardClicked={this.handleCardClicked}
                 />
             </View>
         );
@@ -28,7 +33,6 @@ export default class HomeScreen extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-      paddingBottom: 22,
       flex: 1,
       backgroundColor: '#e0e0e0',
       alignItems: 'center',

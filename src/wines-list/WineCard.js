@@ -1,20 +1,22 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default class WineCard extends React.Component {
 
     render() {
         return(
-            <View style={styles.card}>
-                <Image style={styles.image} source={{uri: this.props.imageUrl}} />
-                <View style={styles.infos}>
-                    <Text style={styles.name}>
-                        {this.props.name}
-                        <Text style={styles.year}>, {this.props.year}</Text>
-                    </Text>
-                    <Text style={styles.appelation}>{this.props.appelation}</Text>
+            <TouchableOpacity onPress={() => this.props.onCardClicked(this.props.wine)}>
+                <View style={styles.card}>
+                    <Image style={styles.image} source={{uri: this.props.wine.imageUrl}} />
+                    <View style={styles.infos}>
+                        <Text style={styles.name}>
+                            {this.props.wine.name}
+                            <Text style={styles.year}>, {this.props.wine.year}</Text>
+                        </Text>
+                        <Text style={styles.appelation}>{this.props.wine.appelation}</Text>
+                    </View>
                 </View>
-            </View>
+            </TouchableOpacity>
         );
     }
 
