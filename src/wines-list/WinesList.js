@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingLeft: 8,
         paddingRight: 8,
-        marginTop: 8,
       },
       item: {
         backgroundColor: '#fff',

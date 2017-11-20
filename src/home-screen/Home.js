@@ -17,7 +17,6 @@ export default class HomeScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Let's try to make a list!</Text>
                 <WinesList 
                     data={HomeScreen.Wines}
                 />
@@ -29,7 +28,6 @@ export default class HomeScreen extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-      paddingTop: 42,
       paddingBottom: 22,
       flex: 1,
       backgroundColor: '#e0e0e0',
