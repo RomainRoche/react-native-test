@@ -28,20 +28,5 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingLeft: 8,
         paddingRight: 8,
-      },
-      item: {
-        backgroundColor: '#fff',
-        padding: 8,
-        marginTop: 8,        
-      },
-      name: {
-        fontSize: 18,
-      },
-      year: {
-        fontSize: 14
-      },
-      appelation: {
-          fontSize: 16,
-          fontWeight: 'bold',
       }
 });
