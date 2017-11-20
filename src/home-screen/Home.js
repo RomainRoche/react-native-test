@@ -20,7 +20,6 @@ export default class HomeScreen extends React.Component {
                 <WinesList 
                     data={HomeScreen.Wines}
                     onCardClicked={(wine) => {
-                        console.log(wine);
                         this.props.navigation.navigate('WineScreen', {wine: wine});
                     }}
                 />

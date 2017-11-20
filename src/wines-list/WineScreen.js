@@ -3,10 +3,14 @@ import { View, Text } from 'react-native';
 
 export default class WineScreen extends React.Component {
 
+    get wine() {
+        return this.props.navigation.state.params.wine;
+    }
+
     render() {
         return(
             <View>
-                <Text>Lorem ipsum</Text>
+                <Text>{this.wine.name}</Text>
             </View>
         );
     }
