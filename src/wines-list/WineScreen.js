@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 
 export default class WineScreen extends React.Component {
 
+    // accessor
     get wine() {
         return this.props.navigation.state.params.wine;
     }
